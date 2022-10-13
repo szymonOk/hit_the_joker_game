@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.container {
+  @include display-flex(column, center);
+  height: 100vh;
+}
+
+.stats {
+  @include display-flex(row, space-between);
+  padding: 0.8em;
+  border: 2px solid $border-color;
+  border-bottom-width: 0px;
+  border-radius: 10px 10px 0 0;
+  background-color: $main-bg;
+
+  &__item {
+    @include display-flex(row, center);
+    color: $light-color;
+    padding: 0 2em;
+
+    span {
+      margin-left: 0.4em;
+      color: darken($info-accent, 9%);
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 602px;
+  height: 600px;
+  border: 1px solid $border-color;
+  background-color: $main-bg;
+
+  &__square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid $border-color;
+  }
+}
+
+.mole {
+  @include image(60%, $joker);
+}
+
+.blur {
+  filter: blur(5px);
+}

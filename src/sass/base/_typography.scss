@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+
+body,
+button,
+input {
+  font-family: $base-font;
+  font-size: 2rem;
+  letter-spacing: 0.6px;
+}
+
+.username-label {
+  font-size: 3rem;
+}
+
+.username-input {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.start-info__title {
+  font-size: 2.8rem;
+}
+
+.difficulty {
+  label {
+    text-transform: uppercase;
+  }
+}
+
+.reset-info__text {
+  font-size: 2.8rem;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.stats__item span {
+  font-size: 3rem;
+}

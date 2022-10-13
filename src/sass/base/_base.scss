@@ -1,0 +1,6 @@
+@use '../abstracts/' as *;
+
+body {
+  position: relative;
+  @include image(cover, $bg);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the Joker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <script src=" ./dist/js/app.min.js" defer></script>
+</head>
+
+<body>
+
+    <!-- MESSAGE ON START -->
+    <div class="start-info">
+
+        <div class="start-info__input">
+            <label class="username-label" for="username">Type your name: </label>
+            <input class="username-input" name="username" type="text" placeholder="player">
+        </div>
+
+        <p class="start-info__title">Select difficulty: </p>
+
+        <div class="start-info__configuration">
+            <div class="difficulty">
+                <div>
+                    <label for="easy">easy</label>
+                    <input id="easy" type="radio" name="difficulty" value="easy">
+                </div>
+                <div>
+                    <label for="medium">medium</label>
+                    <input id="medium" type="radio" name="difficulty" value="medium" checked>
+                </div>
+                <div>
+                    <label for="hard">hard</label>
+                    <input id="hard" type="radio" name="difficulty" value="hard">
+                </div>
+                <div>
+                    <label for="hardcore">hardcore</label>
+                    <input id="hardcore" type="radio" name="difficulty" value="hardcore">
+                </div>
+            </div>
+            <div class="time">
+                <label for="game-time">60 sec</label>
+                <input type="range" name="game-time" min="10" max="60" step="10" orient="vertical">
+                <label for="game-time">10 sec</label>
+            </div>
+        </div>
+
+        <button class="start-info__btn button">start</button>
+
+    </div>
+
+    <!-- MESSAGE ON END -->
+    <div class="reset-info">
+        <p class="reset-info__text">Time is up!</p>
+        <p class="reset-info__text">
+            Congratulations <span class="reset-info__username"></span>, you hit Joker
+            <span class="reset-info__score"></span> times!
+        </p>
+        <button class="reset-info__btn button">try again</button>
+        <button class="reset button">reset</button>
+    </div>
+
+    <!-- MAIN -->
+    <main class="container blur">
+
+        <div class="stats">
+            <p class="stats__item">Your score: <span class="stats__item-score"></span></p>
+            <p class="stats__item">Time left: <span class="stats__item-time"></span></p>
+        </div>
+
+        <div class="grid">
+            <div class="grid__square" id="1"></div>
+            <div class="grid__square" id="2"></div>
+            <div class="grid__square" id="3"></div>
+            <div class="grid__square" id="4"></div>
+            <div class="grid__square" id="5"></div>
+            <div class="grid__square" id="6"></div>
+            <div class="grid__square" id="7"></div>
+            <div class="grid__square" id="8"></div>
+            <div class="grid__square" id="9"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
